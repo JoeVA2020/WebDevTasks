@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.card {
+  width: 35em;
+  height: fit-content;
+  margin: 5em auto;
+  padding: 10px;
+  background-color: #1648c6;
+  border: 0.2em solid black;
+  border-radius: 1.5em;
+}
+h2,h3{
+    color: whitesmoke;
+}
+.card h2,
+.card p {
+  margin: 0.5rem;
+  padding: 0.2rem;
+}
+
+.card article {
+  height: 12em;
+  background-color: rgba(220, 14, 14, 0.25);
+}
+
+.card h2 {
+  font-size: 2em;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.card footer p {
+  font-size: 1.5em;
+  line-height: 2;
+}
+
+.card article p {
+  padding: 1em;
+  color: white;
+}
+
+.card article img {
+  max-height: 100%;
+  float: right;
+}
