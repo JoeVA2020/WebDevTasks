@@ -1,0 +1,92 @@
+/* General setup */
+@font-face {
+    font-family: "zantrokeregular";
+    src:
+      url("fonts/zantroke-webfont.woff2") format("woff2"),
+      url("fonts/zantroke-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0 auto;
+    min-width: 1000px;
+    max-width: 1400px;
+  }
+  
+  /* Layout */
+  
+  section {
+    float: left;
+    width: 50%;
+  }
+  
+  aside {
+    float: left;
+    width: 30%;
+  }
+  
+  nav {
+    float: left;
+    width: 20%;
+    
+  }
+  
+  footer {
+    clear: both;
+  }
+  
+  header, section, aside, nav, footer {
+    padding: 20px;
+  }
+  
+  /* header and footer */
+  
+  header, footer {
+    border-top: 5px solid #a66;
+    border-bottom: 5px solid #a66;
+  }
+  
+  /* WRITE YOUR CODE BELOW HERE */
+  a {
+    text-decoration: none;
+    color: #a66;
+    text-decoration: underline;
+  }
+header{
+    text-align: center;
+}
+img{
+    height: 10px;
+    width: auto;
+}
+.navBox{
+    list-style-type: none;
+}
+.navItem{
+    padding: 1rem;
+    border:#a66 1px solid;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.nav:hover,.navItem:hover{
+    background-color: #a66;
+    color: white;
+}
+.nav{
+    text-decoration: none;
+    font-size: large;
+}
+h1,h2,li{
+    font-family: "Merienda", cursive;
+  font-optical-sizing: auto;
+}
+p{
+    font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  line-height: 1.5rem;
+}
