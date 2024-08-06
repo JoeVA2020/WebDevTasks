@@ -13,22 +13,59 @@
     <div class="container">
         <h2>Sign Up</h2>
         <div class="formContainer">
-            <form action="get" method="post">
+            <form id="signupForm"
+            action="#"
+            method="post"
+            onsubmit="return validateForm()"
+          >
                 <p>Name</p>
-                <input type="text"placeholder="Full Name" required> 
+                <input type="text"placeholder="Full Name" required id="name"> 
                 <p>Username</p>
-                <input type="text" placeholder="Username" required> 
+                <input type="text" placeholder="Username" required id="username"> 
                 <p>Email</p>
-                <input type="email" name="" id="" placeholder="Email" required>
+                <input type="email" name="" id="email" placeholder="Email" required >
                 <p>Password</p>
-                <input type="password" placeholder="Password" required> 
+                <input type="password" placeholder="Password" required id="password" minlength="8">
+                <p>Confirm password</p>
+                <input type="password" placeholder="Confirm password" required id="confirmPassword" minlength="8"> 
                 <div class="btnContainer">
-                    <button type="submit" class="submit">Submit</button>
+                    <button type="submit" class="submit" value="Submit"> <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0">Submit</a></button>
                     <button type="reset" class="reset">Reset</button>
                 </div>
                 
             </form>
+            <p class="error" id="errorMsg"></p>
         </div>
     </div>
+    <script>
+        function validateForm() {
+          // Validation logic here
+          var name = document.getElementById("name").value;
+          var email = document.getElementById("email").value;
+          var username = document.getElementById("username").value;
+          var password = document.getElementById("password").value;
+          var confirmPassword = document.getElementById("confirmPassword").value;
+  
+          if (
+            name === "" ||
+            email === "" ||
+            username === "" ||
+            password === "" ||
+            confirmPassword === ""
+          ) {
+            document.getElementById("errorMsg").innerHTML =
+              "Please fill in all required fields.";
+            return false;
+          }
+  
+          if (password !== confirmPassword) {
+            document.getElementById("errorMsg").innerHTML =
+              "Passwords do not match.";
+            return false;
+          }
+  
+          return true;
+        }
+      </script>
 </body>
 </html>
